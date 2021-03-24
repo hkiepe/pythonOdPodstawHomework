@@ -1,0 +1,6 @@
+import math
+
+def circle_area(radius):
+    return math.pi * math.sqrt(radius)
+
+print(circle_area(float(input("Please input a number: "))))
