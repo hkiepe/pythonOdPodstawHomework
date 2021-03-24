@@ -1,0 +1,9 @@
+def add_number(num_list):
+    aditor = 0
+    for number in num_list:
+        aditor = aditor + number
+    return aditor
+
+num_list = [1, 2, 3]
+
+print(add_number(num_list))
