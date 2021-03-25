@@ -10,7 +10,7 @@ x = 10
 min = float(input("Please type a minimum number: "))
 max = float(input("Please type a maximum number: "))
 
-if in_range(x, min, max):
-    print("in range")
+if in_range(float(x), min, max):
+    print(str(x) + " is in range")
 else:
-    print("not in range")
+    print(str(x) + " is not in range")
