@@ -1,0 +1,16 @@
+def in_range(x, min, max):
+    if x >= min and x <= max:
+        return True
+    else:
+        return False
+
+
+x = 10
+
+min = float(input("Please type a minimum number: "))
+max = float(input("Please type a maximum number: "))
+
+if in_range(x, min, max):
+    print("in range")
+else:
+    print("not in range")
