@@ -1,0 +1,18 @@
+import random
+
+
+words = ['zouk', 'salsa', 'bachata', 'west coast swing']
+word = random.choice(words)
+word_as_list = list('_' * len(word))
+
+game = True
+while game:
+    print(''.join(word_as_list))
+    letter = input("Please guess a letter in this word: ")
+    for i in range(len(word)):
+        if word[i] == letter:
+            word_as_list[i] = letter
+    if '_' not in word_as_list:
+        game = False
+        
+print(''.join(word_as_list))
