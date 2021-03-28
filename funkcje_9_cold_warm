@@ -1,0 +1,33 @@
+import random
+
+
+def check_difference(guess, random_number, previous_guess):
+    if abs(random_number - guess) < abs(random_number - previous_guess):
+        return True
+    else:
+        return False
+
+
+min = 1
+max = 100
+random_number = random.randint(min, max)
+previous_guess = -100
+guess = 0
+game = True
+i = 1
+print("Please guess a number between " + str(min) + " and " + str(max))
+
+while game:
+    guess = int(input("Please guess a number: "))
+    if check_difference(guess, random_number, previous_guess) == True:
+        print("warmer")
+    elif check_difference(guess, random_number, previous_guess) == False:
+        print("colder")
+    if abs(random_number - guess) == 0:
+        print("Congratulation you won!")
+        game = False
+    if i == 6:
+        game = False
+        print("Game over!")
+    previous_guess = guess
+    i = i + 1
