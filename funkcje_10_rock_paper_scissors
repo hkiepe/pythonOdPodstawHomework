@@ -1,0 +1,57 @@
+import random
+
+
+def game_result(user_points, computer_points, choice, random_choice):
+    if choice == random_choice:
+        print('remis')
+    if choice == 'r' and random_choice == 'p':
+        computer_points = computer_points + 1
+        print('Computer wins!')
+    if choice == 'p' and random_choice == 'r':
+        user_points = user_points + 1
+        print('You won!')
+    if choice == 'r' and random_choice == 's':
+        user_points = user_points + 1
+        print('You won!')
+    if choice == 's' and random_choice == 'r':
+        computer_points = computer_points + 1
+        print('Computer wins!')
+    if choice == 'p' and random_choice == 's':
+        computer_points = computer_points + 1
+        print('Computer wins!')
+    if choice == 's' and random_choice == 'p':
+        user_points = user_points + 1
+        print('You won!')
+    return [user_points, computer_points]
+
+
+user_points = 0
+computer_points = 0
+
+while quit != 'j':
+    print("*" * 50)
+    print("r - Rock")
+    print("p - Paper")
+    print("s - scissors")
+    print("*" * 50)
+    choice = input("Please type one of the above values: ")
+
+    random_choice = random.choice(['r', 'p', 's'])
+    print()
+    print("*" * 50)
+    print("Computer has drawn " + random_choice)
+
+    game_result_1 = game_result(user_points, computer_points, choice, random_choice)
+    user_points = game_result_1[0]
+    computer_points = game_result_1[1]
+
+    print("*" * 50)
+    print()
+    quit = input("Do you want to quit? (j/n): ")
+
+
+print()
+print("*" * 50)
+print("Points Computer: " + str(computer_points))
+print("Points User: " + str(user_points))
+print("*" * 50)
