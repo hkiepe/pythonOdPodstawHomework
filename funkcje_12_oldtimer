@@ -1,0 +1,23 @@
+def construction_year_oldtimer(my_car):
+    if abs(my_car['rocznik']-2021) >= 25:
+        return True
+    else:
+        return False
+
+def original_parts(my_car):
+    if my_car['czy_oryginalny']:
+        return True
+    else:
+        return False
+
+my_car = {
+    'marka': 'Nissan',
+    'model': 'GTR',
+    'rocznik': 2020,
+    'czy_oryginalny': True
+}
+
+if construction_year_oldtimer(my_car) and original_parts(my_car):
+    print("Gratulacje! Twój samochód " + my_car['marka'] + " " + my_car['model'] + " rocznik " + str(my_car['rocznik']) + " może być zarejestrowany jako zabytek.")
+else:
+    print("Twój samochód " + my_car['marka'] + " " + my_car['model'] + " rocznik "+ str(my_car['rocznik']) + " jest jeszcze zbyt młody albo ma mniej nisz 75% originalnych cesci.")
